@@ -4,12 +4,13 @@ Firefox extension to extract clean article/blog text from any webpage and copy i
 
 ## Quick Start
 
-[🚀 **Install on Firefox Add-ons**](https://addons.mozilla.org/en-US/firefox/addon/textgrab/) • [📥 Download ZIP](https://github.com/minoshw/textgrab/archive/refs/tags/v1.3.2.zip)
+[🚀 **Install on Firefox Add-ons**](https://addons.mozilla.org/en-US/firefox/addon/textgrab/) • [📥 Download ZIP](https://github.com/minoshw/textgrab/archive/refs/tags/v1.3.3.zip)
 
 ## Features
 
 - **Extract Article Text** — Intelligently extracts main article content from webpages
 - **Markdown Formatting** — Converts HTML to clean, readable markdown with proper formatting
+- **Clean Output** — Skips scripts, styles, and other non-content elements so only page text is copied
 - **Templates** — Format content for AI tools: Summarize, Explain Simply, Study Questions, Action Items, or Fresh Content
 - **Persistent Templates** — Remembers selected template for popup and context-menu copies
 - **Stats Display** — See character and word count before copying
@@ -52,7 +53,7 @@ Everything runs locally. Nothing is sent to a server. No tracking, no data colle
 3. Automatic updates included
 
 ### Option 2: Manual Load (Development)
-[📥 Download v1.3.2](https://github.com/minoshw/textgrab/archive/refs/tags/v1.3.2.zip)
+[📥 Download v1.3.3](https://github.com/minoshw/textgrab/archive/refs/tags/v1.3.3.zip)
 
 1. Download and extract the ZIP file
 2. Open `about:debugging` in Firefox
