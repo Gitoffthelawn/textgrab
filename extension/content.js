@@ -2,6 +2,8 @@ function htmlToMarkdown(html) {
   const doc = new DOMParser().parseFromString(html, "text/html");
   const body = doc.body;
   let md = "";
+  // Non-content elements whose text must never reach the copied output
+  const SKIP_TAGS = ["script", "style", "noscript", "template", "iframe", "object", "svg"];
 
   function traverseInline(node) {
     if (node.nodeType === 3) {
@@ -12,6 +14,7 @@ function htmlToMarkdown(html) {
     if (node.nodeType !== 1) return;
 
     const tag = node.tagName.toLowerCase();
+    if (SKIP_TAGS.includes(tag)) return;
     switch (tag) {
       case "strong":
       case "b":
@@ -80,6 +83,7 @@ function htmlToMarkdown(html) {
     if (node.nodeType !== 1) return;
 
     const tag = node.tagName.toLowerCase();
+    if (SKIP_TAGS.includes(tag)) return;
     const isEmpty = !node.textContent.trim();
 
     if (isEmpty && !["ul", "ol"].includes(tag)) return;
